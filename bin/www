@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var debug = require('debug')('fourtify-visitor');
+var app = require('../app');
+var socketIO = require('../socket/socket');
+
+app.set('port', process.env.PORT || 3001);
+
+var server = app.listen(app.get('port'), function() {
+    console.log('Express server listening on port ' + server.address().port);
+    console.log("Environment: " + process.env.NODE_ENV);
+});
+var io = require('socket.io')(server);
+socketIO.createServer(io);
