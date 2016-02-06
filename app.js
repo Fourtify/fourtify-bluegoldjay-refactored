@@ -57,12 +57,13 @@ app.use('/bower', express.static(path.join(__dirname, 'bower_components')));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 //@todo come back to setup jade
 //app.set('view engine', 'jade');
 
 
 app.use(cors());
-//require('./routes/routes')(app);
+require('./routes/routes')(app);
 
 /*
  * DEPRECATED. Please move these routes to routes.js
