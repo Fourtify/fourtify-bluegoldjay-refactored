@@ -9,7 +9,8 @@ angular.module('dashboard')
           {option:'Employees', icon:'menu-icon fa fa-user', link:'employees'},
           {option:'Forms', icon:'menu-icon fa fa-check-square-o', link:'createform'},
           {option:'Themes', icon:'menu-icon fa fa-picture-o', link:'themes'},
-	      	{option:'Settings', icon:'menu-icon fa fa-cog', link:'settings'}
+          {option:'Settings', icon:'menu-icon fa fa-cog', link:'settings'},
+          {option:'Analytics', icon:'menu-icon fa fa-cog', link:'analytics'}
       	];
       };
 

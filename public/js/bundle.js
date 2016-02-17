@@ -266,6 +266,17 @@ angular.module('auth')
   .config(['$httpProvider', function($httpProvider) {
     $httpProvider.interceptors.push('TokenInjector');
   }]);
+// example test case 
+
+// var assert = require("assert"); // node.js core module
+
+// describe('Array', function(){
+//   describe('#indexOf()', function(){
+//     it('should return -1 when the value is not present', function(){
+//       assert.equal(-1, [1,2,3].indexOf(4)); // 4 is not present in this array so indexOf returns -1
+//     })
+//   })
+// });
 //module that creates a service to handle authentication for sign in and register
 
 angular.module('auth')
@@ -323,17 +334,6 @@ angular.module('auth')
 
   }]);
 
-// example test case 
-
-// var assert = require("assert"); // node.js core module
-
-// describe('Array', function(){
-//   describe('#indexOf()', function(){
-//     it('should return -1 when the value is not present', function(){
-//       assert.equal(-1, [1,2,3].indexOf(4)); // 4 is not present in this array so indexOf returns -1
-//     })
-//   })
-// });
 'use strict';
 
 angular.module('product')
@@ -1099,7 +1099,8 @@ angular.module('dashboard')
           {option:'Employees', icon:'menu-icon fa fa-user', link:'employees'},
           {option:'Forms', icon:'menu-icon fa fa-check-square-o', link:'createform'},
           {option:'Themes', icon:'menu-icon fa fa-picture-o', link:'themes'},
-	      	{option:'Settings', icon:'menu-icon fa fa-cog', link:'settings'}
+	      	{option:'SettingsShit', icon:'menu-icon fa fa-cog', link:'settings'},
+            {option:'Analytics', icon:'menu-icon fa fa-cog', link:'analytics'}
       	];
       };
 
