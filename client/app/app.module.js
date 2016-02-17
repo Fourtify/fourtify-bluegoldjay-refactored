@@ -111,7 +111,14 @@ angular.module('robobetty', appendIonic(
         title: 'Themes',        
         templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
         mobile: false
-      })
+      })            //TODO add analytics page
+        .state('analytics',{
+            url: '/analytics',
+            parent: 'common',
+            title: 'Analytics',
+            templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
+            mobile: false
+        })
       .state('settings',{
         url: '/settings',
         parent: 'common',

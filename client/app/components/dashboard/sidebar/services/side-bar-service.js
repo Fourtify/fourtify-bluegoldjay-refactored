@@ -15,7 +15,7 @@ angular.module('dashboard')
       };
 
       this.getSidebarHeader = function(){
-      		return "iReceptionist";
+      		return "Fourtify";
       };
 
   }]);
