@@ -14,7 +14,7 @@ var controller = require('./theme.controller.js');
  */
 var cors = require('cors');
 
-var Theme = require('../../models/Theme');
+var Theme = require('../../models/old_Theme');
 
 
 

@@ -1,4 +1,4 @@
-var Authmodel = require('../models/Authmodel'),
+var Authmodel = require('../models/old_Authmodel'),
     config = require('config'),
     jwt = require('jwt-simple');
 

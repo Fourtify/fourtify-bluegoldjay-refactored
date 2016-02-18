@@ -8,7 +8,7 @@ var express = require('express');
 var router = express.Router();
 var exports = module.exports;
 
-var Employee = require('../../models/Employee');
+var Employee = require('../../models/old_Employee');
 
 exports.getAllEmployees = function(req, res) {
   Employee.find({_admin_id : req.params.id}, function(err, result) {

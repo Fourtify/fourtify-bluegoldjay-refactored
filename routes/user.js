@@ -8,7 +8,7 @@ var router = express.Router();
 var bodyparser = require('body-parser');
 var urlparser = bodyparser.urlencoded({extended: false});
 
-var User = require('../models/User');
+var User = require('../models/old_User');
 
 router.get('/users', function(req, res) {
   User.find({}, function(err, result) {

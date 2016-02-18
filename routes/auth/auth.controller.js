@@ -19,7 +19,7 @@ var router = express.Router();
 * not need this later. This is just to get the example to work
 * when front end is served from a something other than our app server.
 */
-var Authmodel = require('../../models/Authmodel');
+var Authmodel = require('../../models/old_Authmodel');
 var jwt = require('jwt-simple');
 
 /****** AUTH TEMPLATE ROUTES ******/

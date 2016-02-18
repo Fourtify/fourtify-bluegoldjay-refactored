@@ -10,8 +10,8 @@ var Email = require('../../lib/notification/email');
 var TextModel = require('../../lib/notification/text');
 var Socket = require('../../socket/socket');
 
-var PatientQueue = require('../../models/PatientQueue');
-var Employee = require('../../models/Employee');
+var PatientQueue = require('../../models/old_PatientQueue');
+var Employee = require('../../models/old_Employee');
 
 // This route will be called when the patient checks in
 exports.checkin = function(req, res) {

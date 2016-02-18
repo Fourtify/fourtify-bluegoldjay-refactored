@@ -7,7 +7,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Product = require('../models/Product');
+var Product = require('../models/old_Product');
 
 router.get('/products', function(req, res) {
   Product.find({}, function(err, result) {
