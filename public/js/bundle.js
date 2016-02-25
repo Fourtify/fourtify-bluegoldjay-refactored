@@ -1,173 +1,174 @@
 'use strict';
 
 angular.module('robobetty', appendIonic(
-  [
-    'ui.router',
-    'widget',
-    'product', 
-    'dashboard',
-    'ui.bootstrap',
-    'signin',
-    'register',
-    'thankyou',
-    'DashboardFormBuilderModule',
-    'checkin',
-    'thankyouCheckIn',
-    'recovery',
-    'recoverythx',
-    'themes'
-   ]))
-  .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/patientQueue');
-    $stateProvider
-      .state('common',{
-        templateUrl: 'views/components/dashboard/main/views/dashboard.html',
-        abstract: true,
-        mobile: false
-      })
-      .state('home', {
-        url: '/home',
-        templateUrl: 'views/components/home/views/home.html',
-        mobile: false
-      })
-      .state('createForm', {
-        url: '/createform',
-        controller: 'FormCreateController',
-        templateUrl: 'views/components/dashboard/formBuilder/views/create.html',
-        parent: 'common',
-        title: 'Create New Form',
-        mobile: false
-      })
-      /* Enables route to editforms page
-      .state('editForm', {
-        url: '/editform',
-        controller: 'FormEditController',
-        templateUrl: 'views/components/dashboard/formBuilder/views/edit.html',
-        parent: 'common',
-        title: 'Edit Existing Template'
-      })
-      */
-      .state('dashboard',{
-        url:'/dashboard',
-        template: '',
-        parent: 'common',
-        title: '',
-        mobile: false
-      })
-       .state('patientQueue', {
-        url: '/patientQueue',
-        templateUrl: 'views/components/dashboard/patientQueue/views/patients.html',
-        parent: 'common',
-        title: 'Patients Queue',
-        mobile: false
-      })    
-      .state('employees', {
-        url: '/employees',
-        templateUrl: 'views/components/dashboard/employees/views/employees.html',
-        parent: 'common',
-        title: 'Employees',
-        mobile: false
-      })
-      .state('signin', {
-        url: '/signin',
-        templateUrl: 'views/components/receptionistPortal/signin/views/login.html',
-        mobile: true
-      })
-      .state('register', {
-        url: '/register',
-        templateUrl: 'views/components/receptionistPortal/register/views/register.html',
-        mobile: true
-      })
-      .state('checkin', {
-        url: '/checkin',
-        templateUrl: 'views/components/patientCheckin/checkin/views/checkin.html',
-        mobile: true
-      })
-      .state('thankyou', {
-        url: '/thankyou',
-        templateUrl: 'views/components/receptionistPortal/register/views/thankyou.html',
-        mobile: true
-      })
-      .state('thankyouCheckIn', {
-        url: '/thankyouCheckIn',
-        templateUrl: 'views/components/patientCheckin/checkin/views/CheckInthankyou.html',
-        mobile: true
-      })
-      .state('recovery', {
-        url: '/recovery',
-         controller: 'RecoveryController',
-        templateUrl: 'views/components/receptionistPortal/recovery/views/recovery.html',
-        mobile: true
-      })
-      .state('recoverythx',{
-        url: '/recoverythx',
-        controller: 'RecoveryConfirmController',
-        templateUrl: 'views/components/receptionistPortal/recovery/views/recoveryconfirm.html',
-        mobile: false
-      })
-      .state('themes',{
-        url: '/themes',
-        parent: 'common',
-        title: 'Themes',        
-        templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
-        mobile: false
-      })
-        .state('analytics',{
-            url: '/analytics',
-            parent: 'common',
-            title: 'Analytics',
-            templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
-            mobile: false
-        })
-      .state('settings',{
-        url: '/settings',
-        parent: 'common',
-        title: 'Settings',
-        templateUrl: 'views/components/dashboard/settings/views/settings.html',
-        mobile: false
-      });
-  })
-  ionicCallback(IS_MOBILE);
+    [
+        'ui.router',
+        'widget',
+        'product',
+        'dashboard',
+        'ui.bootstrap',
+        'signin',
+        'register',
+        'thankyou',
+        'DashboardFormBuilderModule',
+        'checkin',
+        'thankyouCheckIn',
+        'recovery',
+        'recoverythx',
+        'themes',
+        'analytics'
+    ]))
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/patientQueue');
+        $stateProvider
+            .state('common', {
+                templateUrl: 'views/components/dashboard/main/views/dashboard.html',
+                abstract: true,
+                mobile: false
+            })
+            .state('home', {
+                url: '/home',
+                templateUrl: 'views/components/home/views/home.html',
+                mobile: false
+            })
+            .state('createForm', {
+                url: '/createform',
+                controller: 'FormCreateController',
+                templateUrl: 'views/components/dashboard/formBuilder/views/create.html',
+                parent: 'common',
+                title: 'Create New Form',
+                mobile: false
+            })
+            /* Enables route to editforms page
+             .state('editForm', {
+             url: '/editform',
+             controller: 'FormEditController',
+             templateUrl: 'views/components/dashboard/formBuilder/views/edit.html',
+             parent: 'common',
+             title: 'Edit Existing Template'
+             })
+             */
+            .state('dashboard', {
+                url: '/dashboard',
+                template: '',
+                parent: 'common',
+                title: '',
+                mobile: false
+            })
+            .state('patientQueue', {
+                url: '/patientQueue',
+                templateUrl: 'views/components/dashboard/patientQueue/views/patients.html',
+                parent: 'common',
+                title: 'Patients Queue',
+                mobile: false
+            })
+            .state('employees', {
+                url: '/employees',
+                templateUrl: 'views/components/dashboard/employees/views/employees.html',
+                parent: 'common',
+                title: 'Employees',
+                mobile: false
+            })
+            .state('signin', {
+                url: '/signin',
+                templateUrl: 'views/components/receptionistPortal/signin/views/login.html',
+                mobile: true
+            })
+            .state('register', {
+                url: '/register',
+                templateUrl: 'views/components/receptionistPortal/register/views/register.html',
+                mobile: true
+            })
+            .state('checkin', {
+                url: '/checkin',
+                templateUrl: 'views/components/patientCheckin/checkin/views/checkin.html',
+                mobile: true
+            })
+            .state('thankyou', {
+                url: '/thankyou',
+                templateUrl: 'views/components/receptionistPortal/register/views/thankyou.html',
+                mobile: true
+            })
+            .state('thankyouCheckIn', {
+                url: '/thankyouCheckIn',
+                templateUrl: 'views/components/patientCheckin/checkin/views/CheckInthankyou.html',
+                mobile: true
+            })
+            .state('recovery', {
+                url: '/recovery',
+                controller: 'RecoveryController',
+                templateUrl: 'views/components/receptionistPortal/recovery/views/recovery.html',
+                mobile: true
+            })
+            .state('recoverythx', {
+                url: '/recoverythx',
+                controller: 'RecoveryConfirmController',
+                templateUrl: 'views/components/receptionistPortal/recovery/views/recoveryconfirm.html',
+                mobile: false
+            })
+            .state('themes', {
+                url: '/themes',
+                parent: 'common',
+                title: 'Themes',
+                templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
+                mobile: false
+            })
+                .state('analytics', {               //TODO add analytics page
+                url: '/analytics',
+                parent: 'common',
+                title: 'Analytics',
+                templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
+                mobile: false
+            })
+            .state('settings', {
+                url: '/settings',
+                parent: 'common',
+                title: 'Settings',
+                templateUrl: 'views/components/dashboard/settings/views/analytics_page.html',
+                mobile: false
+            });
+    })
+ionicCallback(IS_MOBILE);
 
-  function initRunCallback($rootScope, $state, appConfig) {
+function initRunCallback($rootScope, $state, appConfig) {
     $rootScope.$on('$stateChangeSuccess',
-    function(event, toState, toParams, fromState, fromParams) {
-      // Routing for non-registered
-      if(!appConfig.debugMode) {
-        if(!$rootScope.admin_id) {
-          if(toState.name != 'signin' && toState.name != 'register') {
-            $state.go("signin");
-          }
-        }
-      }
-      // Routing for mobile app
-      if(appConfig.isMobile) {
-        if(toState.mobile == false) {
-          $state.go("checkin");
-        }
-      }
-    });
-  }
-  
-
-  function ionicCallback(isMobile) {
-    if(!isMobile) {
-      angular.module("robobetty").run(['$rootScope', '$state', 'appConfig', function($rootScope, $state, appConfig){
-        initRunCallback($rootScope, $state, appConfig);
-      }]);
-    } else {
-      angular.module("robobetty").run(['$rootScope', '$state', 'appConfig', '$ionicPlatform', function($rootScope, $state, appConfig, $ionicPlatform){
-          $ionicPlatform.ready(
-            function() {
-              if (window.StatusBar) {
-                return StatusBar.hide();
-              }
-              initRunCallback($rootScope, $state, appConfig);
+        function (event, toState, toParams, fromState, fromParams) {
+            // Routing for non-registered
+            if (!appConfig.debugMode) {
+                if (!$rootScope.admin_id) {
+                    if (toState.name != 'signin' && toState.name != 'register') {
+                        $state.go("signin");
+                    }
+                }
             }
-          );
-      }]);
+            // Routing for mobile app
+            if (appConfig.isMobile) {
+                if (toState.mobile == false) {
+                    $state.go("checkin");
+                }
+            }
+        });
+}
+
+
+function ionicCallback(isMobile) {
+    if (!isMobile) {
+        angular.module("robobetty").run(['$rootScope', '$state', 'appConfig', function ($rootScope, $state, appConfig) {
+            initRunCallback($rootScope, $state, appConfig);
+        }]);
+    } else {
+        angular.module("robobetty").run(['$rootScope', '$state', 'appConfig', '$ionicPlatform', function ($rootScope, $state, appConfig, $ionicPlatform) {
+            $ionicPlatform.ready(
+                function () {
+                    if (window.StatusBar) {
+                        return StatusBar.hide();
+                    }
+                    initRunCallback($rootScope, $state, appConfig);
+                }
+            );
+        }]);
     }
-  }
+}
 
 angular.module('auth', []);
 angular.module('dashboard', ['ngCookies', 'smart-table', 'ui.bootstrap', 'ui.mask']);
@@ -186,6 +187,8 @@ angular.module("register", ['auth']);
 angular.module("thankyou", []);
 angular.module('signin', ['auth']);
 angular.module('theme', []);
+
+angular.module('analytics', []);
 // var IS_MOBILE = true;
 
 angular.module("robobetty")
@@ -689,6 +692,19 @@ angular.module('dashboard')
 }]);
 'use strict';
 
+angular.module('dashboard')
+	.controller('DashboardController', ['$scope', '$rootScope', '$state', function ($scope, $rootScope, $state) {
+		$scope.title = $state.current.title;
+
+		//Event handler to change titles
+		$rootScope.$on('$stateChangeStart', 
+			function(event, toState, toParams, fromState, fromParams) { 
+				$scope.title = toState.title;
+			}
+		)
+	}]);
+'use strict';
+
 var angularApp = angular.module('DashboardFormBuilderModule', ['ui.bootstrap']);
 
 // angularApp.config(function ($routeProvider) {
@@ -714,19 +730,6 @@ var angularApp = angular.module('DashboardFormBuilderModule', ['ui.bootstrap']);
 
 
 
-'use strict';
-
-angular.module('dashboard')
-	.controller('DashboardController', ['$scope', '$rootScope', '$state', function ($scope, $rootScope, $state) {
-		$scope.title = $state.current.title;
-
-		//Event handler to change titles
-		$rootScope.$on('$stateChangeStart', 
-			function(event, toState, toParams, fromState, fromParams) { 
-				$scope.title = toState.title;
-			}
-		)
-	}]);
 'use strict';
 
 angular.module('dashboard')
@@ -2462,3 +2465,96 @@ angular.module('theme')
                      ,"/images/5.jpg"];
   	
   }]);
+
+
+
+angular.module('analytics')
+    .controller('AnalyticsController', ['$scope', function($scope){
+        console.log("going analytics.");
+        $scope.arrayOfUrl =
+            ["/images/1.jpg"
+                ,"/images/2.jpg"
+                ,"/images/3.jpg"
+                ,"/images/4.jpg"
+                ,"/images/5.jpg"];
+
+    }]);
+
+
+'use strict';
+
+angular.module('dashboard')
+    .controller('AnalyticsController', ['$scope','$rootScope','AnalyticService',
+        function($scope, $rootScope, SettingsService){
+
+            //Object to be put in the request
+            $scope.user = { password: ''};
+            $scope.alerts = [];
+
+            //Possible fields to update
+            $scope.newpassword = '';
+            $scope.newemail = '';
+            $scope.new_company_name = '';
+            $scope.new_company_phone_number = '';
+
+            //Used for validation and API call
+            $scope.validateNewPass = '';
+            $scope.email = $rootScope.email;
+
+            $scope.update = function(){
+                $scope.updateClicked = true;
+                $scope.alerts.pop();
+                if($scope.user.password == ''){
+                    $scope.alerts.push({type:'danger', msg:'You must supply your current password.' });
+                }
+                else {
+
+                    if($scope.newpassword == '' && $scope.newemail == '' && $scope.new_company_name=='' && $scope.new_company_phone_number==''){
+                        $scope.alerts.push({type:'warning', msg:"Settings were not changed"});
+                        return;
+                    }
+                    else if($scope.validateNewPass != $scope.newpassword){
+                        $scope.alerts.push({type:'danger', msg:"New password and Confirmation are not the same." });
+                        return;
+                    } else if($scope.newpassword.length < 4){
+                        $scope.alerts.push({type:'danger', msg: 'New Password length must be at least 4 characters.' });
+                        return;
+                    }
+                    else {
+
+                        if($scope.newpassword != ''){
+                            $scope.user.newpassword = $scope.newpassword;
+                        }
+                        if($scope.newemail != ''){
+                            $scope.user.newemail = $scope.newemail;
+                        }
+                        if($scope.new_company_name != ''){
+                            $scope.user.new_company_name = $scope.new_company_name;
+                        }
+                        if($scope.new_company_phone_number != ''){
+                            $scope.user.new_company_phone_number = $scope.new_company_phone_number;
+                        }
+
+                        //call the update function of settings service to update the info about the user
+                        SettingsService.update($scope.user)
+                            .success(function(data){
+                                if(data=='Oops! Wrong password'){
+                                    $scope.alerts.push({type:'danger', msg: 'Oops! Please check your password!' });
+                                }
+                                else{
+                                    if($scope.newemail != ''){
+                                        $rootScope.email = $scope.newemail;
+                                    }
+                                    $scope.alerts.push({type:'success', msg: 'You have successfully changed your settings' });
+                                }
+                                return data;
+                            })
+                            .error(function(err){
+                                $scope.alerts.push({type:'danger', msg: 'Settings change not successful' });
+                                return err;
+                            });
+                    }
+                }
+            }
+        }]);
+

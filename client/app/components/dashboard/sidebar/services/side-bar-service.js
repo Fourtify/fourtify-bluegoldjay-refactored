@@ -10,7 +10,7 @@ angular.module('dashboard')
           {option:'Forms', icon:'menu-icon fa fa-check-square-o', link:'createform'},
           {option:'Themes', icon:'menu-icon fa fa-picture-o', link:'themes'},
           {option:'Settings', icon:'menu-icon fa fa-cog', link:'settings'},
-          {option:'Analytics', icon:'menu-icon fa fa-cog', link:'analytics'}
+          {option:'Analytics', icon:'menu-icon fa fa-pie-chart', link:'analytics'}
       	];
       };
 
