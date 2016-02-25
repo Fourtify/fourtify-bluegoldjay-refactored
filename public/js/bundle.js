@@ -39,15 +39,6 @@ angular.module('robobetty', appendIonic(
                 title: 'Create New Form',
                 mobile: false
             })
-            /* Enables route to editforms page
-             .state('editForm', {
-             url: '/editform',
-             controller: 'FormEditController',
-             templateUrl: 'views/components/dashboard/formBuilder/views/edit.html',
-             parent: 'common',
-             title: 'Edit Existing Template'
-             })
-             */
             .state('dashboard', {
                 url: '/dashboard',
                 template: '',
@@ -113,18 +104,18 @@ angular.module('robobetty', appendIonic(
                 templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
                 mobile: false
             })
-                .state('analytics', {               //TODO add analytics page
+                .state('analytics', {
                 url: '/analytics',
                 parent: 'common',
                 title: 'Analytics',
-                templateUrl: 'views/components/dashboard/themes/views/dashboardIndex.html',
+                templateUrl: 'views/components/dashboard/analytics/views/analytics_page.html',
                 mobile: false
             })
             .state('settings', {
                 url: '/settings',
                 parent: 'common',
                 title: 'Settings',
-                templateUrl: 'views/components/dashboard/settings/views/analytics_page.html',
+                templateUrl: 'views/components/dashboard/settings/views/settings.html',
                 mobile: false
             });
     })
@@ -2482,7 +2473,6 @@ angular.module('analytics')
 
 
 'use strict';
-
 angular.module('dashboard')
     .controller('AnalyticsController', ['$scope','$rootScope','AnalyticService',
         function($scope, $rootScope, SettingsService){
